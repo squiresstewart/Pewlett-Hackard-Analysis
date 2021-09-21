@@ -40,24 +40,18 @@ INTO unique_titles
 FROM retirement_titles
 ORDER BY retirement_titles.emp_no ASC, retirement_titles.to_date DESC;
 
--- retrieve the number of employees by their most recent job title who are about to retire.
--- First, retrieve the number of titles from the Unique Titles table.
--- Then, create a Retiring Titles table to hold the required information.
--- Group the table by title, then sort the count column in descending order.
--- Export the Retiring Titles table as retiring_titles.csv and save it to your Data folder in the Pewlett-Hackard-Analysis folder.
--- Before you export your table, confirm that it looks like this image:
 
 -- Create count employees table to join
 SELECT COUNT(unique_titles.emp_no)
 
-INTO retiring_count
+-- INTO retiring_count
 FROM unique_titles
 GROUP BY unique_titles.title
 
 -- Create titles table to join
 SELECT COUNT(unique_titles.emp_no),
 	unique_titles.title
-INTO title_count
+-- INTO title_count
 FROM unique_titles
 GROUP BY unique_titles.title
 
@@ -70,4 +64,24 @@ INTO retiring_titles
 FROM title_count
 LEFT JOIN retiring_count
 ON retiring_count.count = title_count.count
-ORDER BY title_count.count DESC;
+ORDER BY title_count.count DESC
+
+
+SELECT DISTINCT ON (em.emp_no)
+					em.emp_no,
+					em.first_name,
+					em.last_name,
+					em.birth_date,
+					de.from_date,
+					de.to_date,
+ 					ti.title
+INTO mentorship_eligibility
+FROM employees as em
+
+LEFT OUTER JOIN dept_emp AS de
+        ON (em.emp_no = de.emp_no)
+RIGHT OUTER JOIN titles AS ti
+        ON (em.emp_no = ti.emp_no)
+WHERE (em.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+		AND (de.to_date = '9999-01-01')
+ORDER BY em.emp_no;
