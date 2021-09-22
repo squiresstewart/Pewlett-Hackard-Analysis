@@ -44,14 +44,14 @@ ORDER BY retirement_titles.emp_no ASC, retirement_titles.to_date DESC;
 -- Create count employees table to join
 SELECT COUNT(unique_titles.emp_no)
 
--- INTO retiring_count
+INTO retiring_count
 FROM unique_titles
 GROUP BY unique_titles.title
 
 -- Create titles table to join
 SELECT COUNT(unique_titles.emp_no),
 	unique_titles.title
--- INTO title_count
+INTO title_count
 FROM unique_titles
 GROUP BY unique_titles.title
 
@@ -85,3 +85,28 @@ RIGHT OUTER JOIN titles AS ti
 WHERE (em.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 		AND (de.to_date = '9999-01-01')
 ORDER BY em.emp_no;
+
+
+-- SYNTAX FOR DELIVERABLE 3
+-- Get the retiring salaries per department
+SELECT unique_titles.emp_no,
+	salaries.salary,
+	dept_emp.dept_no,
+	dept_info.dept_name
+INTO salaries_by_dept
+FROM unique_titles
+
+INNER JOIN salaries
+ON unique_titles.emp_no = salaries.emp_no
+INNER JOIN  dept_emp
+ON unique_titles.emp_no = dept_emp.emp_no
+INNER JOIN dept_info
+ON unique_titles.emp_no = dept_info.emp_no;
+
+-- SUM the salaries and group by department name
+
+SELECT (salaries_by_dept.dept_name),
+SUM (salaries_by_dept.salary)
+INTO dept_salaries_total
+FROM salaries_by_dept
+GROUP BY dept_name;
