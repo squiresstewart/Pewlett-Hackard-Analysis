@@ -14,6 +14,8 @@
 ## Overview of the analysis: 
 
 The purpose of this employee database analysis is to determine the number of retiring employees indicated by employee birth dates. Deeper analysis also groups each retiring position by thier position titles for a count of how many of each will soon need filled. Furthermore, the analysis also selects and counts current employees that meet retirement eligibility critea to participate in a proposed mentorship program to better prepare for the coming retirements.
+![EmployeeDB.png](./EmployeeDB.png)
+
 
 
 ## Results: 
@@ -36,8 +38,8 @@ Results of the analysis inidicate that of the 90,398 positions to be filled the 
 - 1761 Assistant Engineer positions
 - 2 Manager Positions
 
-![positions_per_mentor.png](/Resources/positions_per_mentor.png)
+![titles.png](./titles.png)
 
 Based upon mentor requirements we can see an insuffucient number of mentors available; needed most in the Senior Engineering and Senior Staff positions.
-![positions_per_mentor.png](/Resources/positions_per_mentor.png)
+![positions_per_mentor.png](./positions_per_mentor.png)
 
