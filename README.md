@@ -1,17 +1,8 @@
-
-
-[text file](/analysis/election_results.txt)
-
-![positions_per_mentor.png](/Resources/positions_per_mentor.png)
-
-[program](/PyPoll_Challenge.py)
-
-
-# Pewlett-Hackard-Analysis
+# [Pewlett-Hackard-Analysis](./Data)
 An analysis project of an employee database that uses SQL commands to query, filter, join and sort several tables using primary keys
 and keys to build table relations.
 
-![EmployeeDB.png](./EmployeeDB.png)
+![EmployeeDB.png](./Resources/EmployeeDB.png)
 
 
 
@@ -41,15 +32,15 @@ Results of the analysis inidicate that of the 90,398 positions to be filled the 
 - 1761 Assistant Engineer positions
 - 2 Manager Positions
 
-![titles.png](./titles.png)
+![titles.png](./Resources/titles.png)
 
 Based upon mentor requirements we can see an insuffucient number of mentors available; needed most in the Senior Engineering and Senior Staff positions.
-![positions_per_mentor.png](./positions_per_mentor.png)
+![positions_per_mentor.png](./Resources/positions_per_mentor.png)
 
 It is clear that Pewlett-Hackard has a considerable shift in staffing. The analysis not only reveals staffing losses, but it also reveals how much payroll each department will be absorbing into their available budgets which will help to better the plan staffing changes. The inevitable loss of staff might provide a perfect 
 opportunity to redistribute payroll capital between failing departments which will minimize expenses and increase profits in those areas.
 
-[dept_salaries_total.csv](./dept_salaries_total.csv)
+[dept_salaries_total.csv](./Data/dept_salaries_total.csv)
 
 In conclusion, the Pewlett-Hackard company should implement more agressive hiring programs in addition to a mentorship program. Considering promoting from within the company will place more skilled tenured employees in senior level positions. Those employees might need less mentoring as they are already familiar with company roles and expections. This will open up lower level positions to new hire candidates which places risk and costs to train at position levels that hold less stake.
 
