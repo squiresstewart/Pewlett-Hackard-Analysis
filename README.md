@@ -2,7 +2,7 @@
 
 [text file](/analysis/election_results.txt)
 
-![output.png](/Resources/output.png)
+![positions_per_mentor.png](/Resources/positions_per_mentor.png)
 
 [program](/PyPoll_Challenge.py)
 
@@ -13,35 +13,31 @@
 
 ## Overview of the analysis: 
 
-The purpose of this employee database analysis is to determine the number of retiring employees per title, and identify employees who are eligible to participate in a mentorship program
-using SQL queries and commands. 
-
+The purpose of this employee database analysis is to determine the number of retiring employees indicated by employee birth dates. Deeper analysis also groups each retiring position by thier position titles for a count of how many of each will soon need filled. Furthermore, the analysis also selects and counts current employees that meet retirement eligibility critea to participate in a proposed mentorship program to better prepare for the coming retirements.
 
 
 ## Results: 
 
-Provide a bulleted list with four major points from the two analysis deliverables. Use images as support where needed
-- 90,398 current employees are expected to retire soon
-- 63% of retiring employeesare senior level positions 
-
-- 1,549 employees are eligible to be mentors in the mentorship program
+- 90,398 current employees are expected to retire.
+- 63% of retiring employees are senior level positions 
 - 48% of retiring Senior Engineers can be replaced via internal promotion.
 - 43% of the retiring Senior Staff can be replaced via internal promotion.
-
+- 1,549 employees are eligible to be mentors in the mentorship program
 
 ## Summary: 
 
-Provide high-level responses to the following questions, 
-then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
 
-How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-63% of retiring employees are senior level positions
-- 29,414 are Senior Engineer positions
-- 28,255 are Senior Staff positions
+Results of the analysis inidicate that of the 90,398 positions to be filled the top two postions account for 63% of the total.
+- 29,414 Senior Engineer positions
+- 28,255 Senior Staff positions
+- 14,222 Engineer positions
+- 12242 Staff positions
+- 4502 Technique Leader positions
+- 1761 Assistant Engineer positions
+- 2 Manager Positions
 
-Based upon mentor requirements we can see that there is a lack of mentors needed per positions Senior Engineers 
+![positions_per_mentor.png](/Resources/positions_per_mentor.png)
 
-Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-
-
+Based upon mentor requirements we can see an insuffucient number of mentors available; needed most in the Senior Engineering and Senior Staff positions.
+![positions_per_mentor.png](/Resources/positions_per_mentor.png)
 
